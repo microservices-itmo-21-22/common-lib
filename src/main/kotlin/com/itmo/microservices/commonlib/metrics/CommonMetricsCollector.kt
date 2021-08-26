@@ -13,7 +13,7 @@ open class CommonMetricsCollector(private val serviceName: String) {
     )
 
     fun countEvent(event: NotableEvent) {
-        Metrics.counter(EVENTS, EVENTS_TYPE_LABEL, event.getName()).increment()
+//        Metrics.counter(EVENTS, EVENTS_TYPE_LABEL, event.getName()).increment()
         prometheusEventsCounter.labels(event.getName()).inc()
     }
 
