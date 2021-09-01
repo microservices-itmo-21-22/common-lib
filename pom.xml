@@ -6,7 +6,7 @@
 
     <groupId>com.itmo.microservices</groupId>
     <artifactId>common-lib</artifactId>
-    <version>${current-version}-SNAPSHOT</version>
+    <version>${current-versionЪ</version>
     <packaging>jar</packaging>
 
     <properties>
