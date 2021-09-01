@@ -10,12 +10,13 @@
     <packaging>jar</packaging>
 
     <properties>
-        <git.username>microservices--itmo-21-22</git.username>
+        <git.username>microservices-itmo-21-22</git.username>
         <git.repo>common-lib</git.repo>
         <java.version>11</java.version>
         <kotlin.version>1.5.0-release-759</kotlin.version>
         <micrometer.version>1.5.2</micrometer.version>
         <simpleclient.version>0.8.1</simpleclient.version>
+        <current-version>0.1.0</current-version>
     </properties>
 
     <dependencyManagement>
@@ -127,19 +128,12 @@
                                 <annotationProcessorPath>
                                     <groupId>org.springframework.boot</groupId>
                                     <artifactId>spring-boot-configuration-processor</artifactId>
-                                    <version>${project.parent.version}</version>
+                                    <version>2.5.3</version>
                                 </annotationProcessorPath>
                             </annotationProcessorPaths>
                         </configuration>
                     </execution>
                 </executions>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.jetbrains.kotlin</groupId>
-                        <artifactId>kotlin-maven-allopen</artifactId>
-                        <version>${kotlin.version}</version>
-                    </dependency>
-                </dependencies>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
