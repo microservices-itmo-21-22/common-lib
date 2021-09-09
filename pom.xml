@@ -4,12 +4,6 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <version>2.5.3</version>
-        <artifactId>spring-boot-starter-parent</artifactId>
-    </parent>
-
     <groupId>com.itmo.microservices</groupId>
     <artifactId>common-lib</artifactId>
     <version>${current-version}-SNAPSHOT</version>
@@ -22,7 +16,7 @@
         <kotlin.version>1.5.30</kotlin.version>
         <micrometer.version>1.5.2</micrometer.version>
         <simpleclient.version>0.8.1</simpleclient.version>
-        <current-version>0.5.0</current-version>
+        <current-version>0.1.0</current-version>
     </properties>
 
     <dependencyManagement>
@@ -94,8 +88,8 @@
     <!-- Нужен для пуша jar в репозиторий libs-snapshot-local в jfrog artifactory -->
     <distributionManagement>
         <snapshotRepository>
-            <id>itmo-snapshots</id>
-            <url>http://77.234.215.138:30031/artifactory/libs-snapshot</url>
+            <id>snapshots</id>
+            <url>http://artifactory:8081/artifactory/libs-snapshot-local</url>
         </snapshotRepository>
     </distributionManagement>
 
@@ -103,10 +97,6 @@
         <sourceDirectory>${project.basedir}/src/main/kotlin</sourceDirectory>
         <testSourceDirectory>${project.basedir}/src/test/kotlin</testSourceDirectory>
         <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
             <plugin>
                 <groupId>org.jetbrains.kotlin</groupId>
                 <artifactId>kotlin-maven-plugin</artifactId>
@@ -147,6 +137,10 @@
                         </configuration>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
