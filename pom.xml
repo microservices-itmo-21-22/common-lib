@@ -9,6 +9,12 @@
     <version>${current-version}-SNAPSHOT</version>
     <packaging>jar</packaging>
 
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <version>2.5.3</version>
+        <artifactId>spring-boot-starter-parent</artifactId>
+    </parent>
+
     <properties>
         <git.username>microservices-itmo-21-22</git.username>
         <git.repo>common-lib</git.repo>
@@ -16,7 +22,7 @@
         <kotlin.version>1.5.30</kotlin.version>
         <micrometer.version>1.5.2</micrometer.version>
         <simpleclient.version>0.8.1</simpleclient.version>
-        <current-version>0.1.0</current-version>
+        <current-version>0.5.0</current-version>
     </properties>
 
     <dependencyManagement>
