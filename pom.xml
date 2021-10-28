@@ -22,7 +22,7 @@
         <kotlin.version>1.5.30</kotlin.version>
         <micrometer.version>1.5.2</micrometer.version>
         <simpleclient.version>0.8.1</simpleclient.version>
-        <current-version>0.5.0</current-version>
+        <current-version>0.6.0</current-version>
     </properties>
 
     <dependencyManagement>
