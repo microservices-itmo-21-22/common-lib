@@ -32,27 +32,27 @@ class EventLogger(private val log: Logger,
 ) {
 
     fun trace(event: NotableEvent, vararg payload: Any?) {
-        log.trace(event.getTemplate(), payload)
+        log.trace(event.getTemplate(), *payload)
         metrics.countEvent(event)
     }
 
     fun debug(event: NotableEvent, vararg payload: Any?) {
-        log.debug(event.getTemplate(), payload)
+        log.debug(event.getTemplate(), *payload)
         metrics.countEvent(event)
     }
 
     fun info(event: NotableEvent, vararg payload: Any?) {
-        log.info(event.getTemplate(), payload)
+        log.info(event.getTemplate(), *payload)
         metrics.countEvent(event)
     }
 
     fun warn(event: NotableEvent, vararg payload: Any?) {
-        log.warn(event.getTemplate(), payload)
+        log.warn(event.getTemplate(), *payload)
         metrics.countEvent(event)
     }
 
     fun error(event: NotableEvent, vararg payload: Any?) {
-        log.error(event.getTemplate(), payload)
+        log.error(event.getTemplate(), *payload)
         metrics.countEvent(event)
     }
 }
