@@ -2,6 +2,7 @@ package com.itmo.microservices.commonlib.logging
 
 import com.itmo.microservices.commonlib.metrics.CommonMetricsCollector
 import org.slf4j.Logger
+import org.slf4j.Marker
 
 /**
  * This is specialized version of logback logger.
@@ -53,6 +54,31 @@ class EventLogger(private val log: Logger,
 
     fun error(event: NotableEvent, vararg payload: Any?) {
         log.error(event.getTemplate(), *payload)
+        metrics.countEvent(event)
+    }
+
+    fun trace(marker: Marker, event: NotableEvent, vararg payload: Any?) {
+        log.trace(marker, event.getTemplate(), *payload)
+        metrics.countEvent(event)
+    }
+
+    fun debug(marker: Marker,event: NotableEvent, vararg payload: Any?) {
+        log.debug(marker, event.getTemplate(), *payload)
+        metrics.countEvent(event)
+    }
+
+    fun info(marker: Marker,event: NotableEvent, vararg payload: Any?) {
+        log.info(marker, event.getTemplate(), *payload)
+        metrics.countEvent(event)
+    }
+
+    fun warn(marker: Marker,event: NotableEvent, vararg payload: Any?) {
+        log.warn(marker, event.getTemplate(), *payload)
+        metrics.countEvent(event)
+    }
+
+    fun error(marker: Marker,event: NotableEvent, vararg payload: Any?) {
+        log.error(marker, event.getTemplate(), *payload)
         metrics.countEvent(event)
     }
 }
