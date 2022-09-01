@@ -6,22 +6,23 @@
 
     <groupId>com.itmo.microservices</groupId>
     <artifactId>common-lib</artifactId>
-    <version>0.8.0-SNAPSHOT</version>
+    <version>0.9.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
-        <version>2.5.3</version>
         <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.6.6</version>
     </parent>
 
     <properties>
         <git.username>microservices-itmo-21-22</git.username>
         <git.repo>common-lib</git.repo>
         <java.version>11</java.version>
-        <kotlin.version>1.5.30</kotlin.version>
-        <micrometer.version>1.5.2</micrometer.version>
-        <simpleclient.version>0.8.1</simpleclient.version>
+        <kotlin.version>1.7.10</kotlin.version>
+        <spring.boot.version>2.6.6</spring.boot.version>
+        <micrometer.version>1.9.3</micrometer.version>
+        <simpleclient.version>0.16.0</simpleclient.version>
     </properties>
 
     <dependencyManagement>
@@ -29,7 +30,7 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
-                <version>2.5.3</version>
+                <version>${spring.boot.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
