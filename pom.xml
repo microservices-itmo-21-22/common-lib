@@ -19,7 +19,7 @@
         <git.username>microservices-itmo-21-22</git.username>
         <git.repo>common-lib</git.repo>
         <java.version>11</java.version>
-        <kotlin.version>1.5.30</kotlin.version>
+        <kotlin.version>1.6.0</kotlin.version>
         <micrometer.version>1.5.2</micrometer.version>
         <simpleclient.version>0.8.1</simpleclient.version>
     </properties>
